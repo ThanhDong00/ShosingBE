@@ -1,0 +1,30 @@
+POST http://localhost:8080/api/categories/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzQ3NzkxODYsImV4cCI6MTczNDg2NTU4Nn0.uSVn46FbZCaHelaorJWNVaILjf6OFw7dXHzsiUWPIHs
+Content-Type: application/json
+
+{
+  "name": "Vans",
+  "description": "Vans"
+}
+
+###
+GET http://localhost:8080/api/categories
+
+###
+PUT http://localhost:8080/api/categories/67669f622318f341edad003c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDc3ODYyOCwiZXhwIjoxNzM0ODY1MDI4fQ._82zu9HVmnR-Yjyrt5b-_AJGlA-oIzv8yfCf5oTzNEw
+Content-Type: application/json
+
+{
+  "name": "Update: Sandals"
+}
+
+###
+DELETE http://localhost:8080/api/categories/67669f622318f341edad003c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJyb2xlIjoidXNlciIsImlhdCI6MTczNDc3ODYyOCwiZXhwIjoxNzM0ODY1MDI4fQ._82zu9HVmnR-Yjyrt5b-_AJGlA-oIzv8yfCf5oTzNEw
+
+###
+GET http://localhost:8080/api/categories/67669fef2318f341edad0043
+
+###
+GET http://localhost:8080/api/categories/67669fef2318f341edad0043/products

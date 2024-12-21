@@ -1,0 +1,86 @@
+GET http://localhost:8080/ 
+
+###
+GET http://localhost:8080/api/users
+
+###
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "email": "admin1@gmail.com",
+  "password": "admin1",
+  "name": "admin1",
+  "phone": "0123456789",
+  "role": "admin"
+}
+
+###
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "admin"
+}
+
+###
+POST  http://localhost:8080/api/users/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+
+###
+GET http://localhost:8080/api/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+
+###
+PUT http://localhost:8080/api/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+Content-Type: application/json
+
+{
+  "name": "test1",
+  "phone": "0123456788"
+}
+
+###
+PUT http://localhost:8080/api/users/password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+Content-Type: application/json
+
+{
+  "currentPassword": "test",
+  "newPassword": "test1"
+}
+
+###
+POST http://localhost:8080/api/users/addresses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+Content-Type: application/json
+
+{
+  "city": "HCM",
+  "district": "Thu Duc",
+  "ward": "Linh Trung",
+  "street": "321 Thanh Giong"
+}
+
+###
+GET http://localhost:8080/api/users/addresses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+
+###
+PUT http://localhost:8080/api/users/addresses/67668cc955684728081e9b64
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+Content-Type: application/json
+
+{
+  "district": "TP Thu Duc"
+}
+
+###
+DELETE http://localhost:8080/api/users/addresses/67668f5c26a43cd2423a6419
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+
+###
+PUT http://localhost:8080/api/users/addresses/67668cc955684728081e9b64/default
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0

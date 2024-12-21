@@ -1,0 +1,45 @@
+POST http://localhost:8080/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzQ3NzkxODYsImV4cCI6MTczNDg2NTU4Nn0.uSVn46FbZCaHelaorJWNVaILjf6OFw7dXHzsiUWPIHs
+Content-Type: application/json
+
+{
+  "name": "Vans",
+  "description": "Vans",
+  "basePrice": 50,
+  "category": "67669fef2318f341edad0043",
+  "variations": [
+    {
+      "color": "White",
+      "sizes": [
+      {
+        "size": "S",
+        "stock": 10,
+        "price": 50
+      }, {
+        "size": "M",
+        "stock": 10,
+        "price": 50
+      }, {
+        "size": "L",
+        "stock": 10,
+        "price": 50
+      }
+      ],
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "color": "Black",
+      "sizes": [
+      {
+        "size": "S",
+        "stock": 10,
+        "price": 50
+      }, {
+        "size": "M",
+        "stock": 10,
+        "price": 50
+      }
+      ]
+    }
+  ]
+}
