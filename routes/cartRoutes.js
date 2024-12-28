@@ -19,4 +19,4 @@ router.delete("/items/:itemId", auth, removeCartItem);
 router.delete("/", auth, clearCart);
 router.get("/total", auth, getTotal);
 
-export default router;
+module.exports = router;
