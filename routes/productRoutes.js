@@ -17,15 +17,15 @@ const router = express.Router();
 
 // Admin routes
 router.post("/", auth, isAdmin, createProduct);
-// router.put("/:id", auth, isAdmin, updateProduct);
-// router.delete("/:id", auth, isAdmin, deleteProduct);
-// router.post("/:id/variations", auth, isAdmin, addProductVariation);
-// router.put("/variations/:id", auth, isAdmin, updateProductVariation);
-// router.delete("/variations/:id", auth, isAdmin, deleteProductVariation);
+router.put("/:id", auth, isAdmin, updateProduct);
+router.delete("/:id", auth, isAdmin, deleteProduct);
+router.post("/:id/variations", auth, isAdmin, addProductVariation);
+router.put("/variations/:id", auth, isAdmin, updateProductVariation);
+router.delete("/variations/:id", auth, isAdmin, deleteProductVariation);
 
 // Public routes
-// router.get("/", getAllProducts);
-// router.get("/:id", getProductById);
+router.get("/", getAllProducts);
+router.get("/:id", getProductById);
 // router.get("/category/:categoryId", getProductsByCategory);
 
 module.exports = router;
