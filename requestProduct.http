@@ -1,3 +1,4 @@
+### Add product
 POST http://localhost:8080/api/products
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzQ3NzkxODYsImV4cCI6MTczNDg2NTU4Nn0.uSVn46FbZCaHelaorJWNVaILjf6OFw7dXHzsiUWPIHs
 Content-Type: application/json
@@ -43,3 +44,52 @@ Content-Type: application/json
     }
   ]
 }
+
+### Get all products
+GET http://localhost:8080/api/products
+
+### Get product by id
+GET http://localhost:8080/api/products/6766a9ef537b394dfd17f5f0
+
+### Update product
+PUT http://localhost:8080/api/products/6766a9ef537b394dfd17f5f0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+Content-Type: application/json
+
+{
+  "description": "Hot Vans"
+}
+
+### Add product variation
+POST http://localhost:8080/api/products/6766a9ef537b394dfd17f5f0/variations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+Content-Type: application/json
+
+{
+  "color": "Red",
+  "sizes": [
+    {
+      "size": "S",
+      "stock": 10,
+      "price": 50
+    }, {
+      "size": "M",
+      "stock": 10,
+      "price": 50
+    }
+  ],
+  "image": "https://picsum.photos/200"
+}
+
+### Update product variation by variation id
+PUT http://localhost:8080/api/products/variations/676fa695840eae835859581b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+Content-Type: application/json
+
+{
+  "color": "Rose"
+}
+
+### Delete product variation by variation id
+DELETE http://localhost:8080/api/products/variations/676fa695840eae835859581b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A

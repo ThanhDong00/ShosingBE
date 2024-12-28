@@ -1,0 +1,38 @@
+### Get user order
+GET http://localhost:8080/api/orders/my-orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+
+### Get all orders
+GET http://localhost:8080/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+
+### Get order by id
+GET http://localhost:8080/api/orders/676fb0db7f7da2b30d4b5e94
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+
+### Create order
+POST http://localhost:8080/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+Content-Type: application/json
+
+{
+  "addressId" : "676fb0b47f7da2b30d4b5e89"
+}
+
+### Update order status
+PUT http://localhost:8080/api/orders/676fb0db7f7da2b30d4b5e94/status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+Content-Type: application/json
+
+{
+  "status" : "processing"
+}
+
+### Update order payment status
+PUT http://localhost:8080/api/orders/676fb0db7f7da2b30d4b5e94/payment
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+Content-Type: application/json
+
+{
+  "paymentStatus" : "failed"
+}

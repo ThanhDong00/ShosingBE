@@ -30,7 +30,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2O
 
 ###
 GET http://localhost:8080/api/users/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
 
 ###
 PUT http://localhost:8080/api/users/profile
@@ -54,7 +54,7 @@ Content-Type: application/json
 
 ###
 POST http://localhost:8080/api/users/addresses
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2ODUxYjBkZTExZTBhZTBlOWU2NzciLCJpYXQiOjE3MzQ3NzI0NzksImV4cCI6MTczNDg1ODg3OX0.CVemLRAd_S_SSKL6QDrA7LkL0JBqWGY9HS2UXm93MG0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
 Content-Type: application/json
 
 {

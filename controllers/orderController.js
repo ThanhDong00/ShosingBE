@@ -2,9 +2,6 @@ const Cart = require("../models/cart");
 const Order = require("../models/order");
 const Variation = require("../models/variation");
 
-// @desc    Create new order
-// @route   POST /api/orders
-// @access  Private
 const createOrder = async (req, res) => {
   try {
     const { addressId } = req.body;

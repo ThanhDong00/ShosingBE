@@ -160,11 +160,12 @@ const updateCartItemQuantity = async (req, res) => {
         .json({ success: false, message: "Cart not found" });
     }
 
-    const itemIndex = cart.items.findIndex((item) => {
-      item.product.toString() === productId &&
+    const itemIndex = cart.items.findIndex(
+      (item) =>
+        item.product.toString() === productId &&
         item.variation.color === color &&
-        item.variation.size === size;
-    });
+        item.variation.size === size
+    );
 
     if (itemIndex === -1) {
       return res
@@ -238,11 +239,12 @@ const removeCartItem = async (req, res) => {
         .json({ success: false, message: "Cart not found" });
     }
 
-    const itemIndex = cart.items.findIndex((item) => {
-      item.product.toString() === productId &&
+    const itemIndex = cart.items.findIndex(
+      (item) =>
+        item.product.toString() === productId &&
         item.variation.color === color &&
-        item.variation.size === size;
-    });
+        item.variation.size === size
+    );
 
     if (itemIndex === -1) {
       return res
