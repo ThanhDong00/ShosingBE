@@ -93,3 +93,10 @@ Content-Type: application/json
 ### Delete product variation by variation id
 DELETE http://localhost:8080/api/products/variations/676fa695840eae835859581b
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+
+### Delete product by id
+DELETE http://localhost:8080/api/products/676fdadd6e1cf70c06dab29f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2YTA4ZDIzMThmMzQxZWRhZDAwNDkiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzUzNzAyMjgsImV4cCI6MTczNTQ1NjYyOH0.UzDakRmMsF3CF3i4ZIrhTYUv6DzAVIL5ogrw7vZcv9A
+
+### Search product by name
+GET http://localhost:8080/api/products/search?keyword=Vintas

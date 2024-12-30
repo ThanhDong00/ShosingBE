@@ -255,6 +255,32 @@ const deleteProductVariation = async (req, res) => {
   }
 };
 
+const searchProduct = async (req, res) => {
+  try {
+    const { keyword } = req.query;
+
+    const products = await Product.find({
+      name: {
+        $regex: keyword,
+        $options: "i", // 'i' makes it case insensitive
+      },
+    })
+      .populate("category")
+      .populate("variations");
+
+    res.status(200).json({
+      success: true,
+      message: "Search products successfully",
+      products,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Server error",
+    });
+  }
+};
+
 module.exports = {
   createProduct,
   getAllProducts,
@@ -264,4 +290,5 @@ module.exports = {
   updateProductVariation,
   deleteProductVariation,
   deleteProduct,
+  searchProduct,
 };

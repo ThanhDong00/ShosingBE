@@ -10,6 +10,7 @@ const {
   addProductVariation,
   updateProductVariation,
   deleteProductVariation,
+  searchProduct,
 } = require("../controllers/productController");
 const { auth, isAdmin } = require("../middleware/auth");
 
@@ -24,6 +25,7 @@ router.put("/variations/:id", auth, isAdmin, updateProductVariation);
 router.delete("/variations/:id", auth, isAdmin, deleteProductVariation);
 
 // Public routes
+router.get("/search", searchProduct);
 router.get("/", getAllProducts);
 router.get("/:id", getProductById);
 // router.get("/category/:categoryId", getProductsByCategory);
