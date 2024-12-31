@@ -24,6 +24,10 @@ const orderSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Address",
   },
+  address: {
+    type: String,
+    required: true,
+  },
   status: {
     type: String,
     enum: ["pending", "processing", "shipped", "delivered"],

@@ -4,7 +4,7 @@ const Variation = require("../models/variation");
 
 const createOrder = async (req, res) => {
   try {
-    const { addressId } = req.body;
+    const { address } = req.body;
 
     const cart = await Cart.findOne({ user: req.user.userId });
     if (!cart || cart.items.length === 0) {
@@ -41,7 +41,7 @@ const createOrder = async (req, res) => {
     const order = new Order({
       user: req.user.userId,
       items: cart.items,
-      shippingAddress: addressId,
+      address: address,
       totalAmount: total,
       status: "pending",
       paymentStatus: "pending",
