@@ -15,6 +15,8 @@ app.use(cors());
 app.use(express.json());
 dotenv.config();
 
+connectDb();
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
@@ -27,6 +29,5 @@ app.use("/api/orders", orderRoutes);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
-  connectDb();
   console.log(`Server is running on port ${port}`);
 });
